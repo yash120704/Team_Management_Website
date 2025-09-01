@@ -63,7 +63,7 @@ export default function LoginForm({ onLoginSuccess }: LoginFormProps) {
           queryParams: {
             hd: 'vit.ac.in', // restrict to VIT domain
           },
-          redirectTo: window.location.origin + '/auth/callback',
+          redirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`,
         },
       });
       if (error) throw error;
